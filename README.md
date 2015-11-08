@@ -2,6 +2,8 @@
 
 Creating something that somehow flies
 
+![Blueprint](https://github.com/joeyrogues/Drone/blob/master/doc/blueprint1.png "Blueprint")
+
 # How to install/run
 
  - npm install
