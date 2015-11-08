@@ -12,3 +12,4 @@ Creating something that somehow flies
 
 # Documents
  - [Blueprints](https://moqups.com/rogues.jonathan.168@gmail.com/LVYL6Dj8 "Blueprints")
+ - [Class diagram](https://drive.google.com/file/d/0ByCdvy1UmQoXc3A2aG1HMlFZSUE/view?usp=sharing "Class diagram")
