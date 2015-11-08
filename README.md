@@ -1,3 +1,3 @@
-*Personal project*
+## Personal project
 
 Creating something that somehow flies
