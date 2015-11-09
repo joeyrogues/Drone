@@ -13,6 +13,14 @@ server.connection({
     port: 3000
 });
 
+server.route({
+	method: 'GET',
+	path: '/ping',
+	handler: function (request, reply) {
+		return reply();
+	}
+});
+
 server.route(require('./routes'));
 
 server.start(function (error) {
