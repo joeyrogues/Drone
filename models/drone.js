@@ -9,7 +9,7 @@ var DIRECTION = {
 	RIGHT:    "right"
 };
 
-var Drone = {
+var DroneRoutes = {
 	moveForward: function (callback) {
 		// TODO
 		callback();
@@ -45,4 +45,4 @@ var Drone = {
 	}
 };
 
-module.exports = Drone;
+module.exports = DroneRoutes;

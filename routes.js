@@ -3,7 +3,7 @@
 
 
 var Boom = require('boom');
-var Drone = require('./lib/drone');
+var Drone = require('./models/drone');
 
 var move = {
     method: 'POST',

@@ -2,7 +2,9 @@
 
 
 
+var five = require('johnny-five');
 var Hapi = require('hapi');
+
 
 var server = new Hapi.Server();
 server.connection({
@@ -10,7 +12,7 @@ server.connection({
 		cors: true
 	},
 	host: '192.168.1.17', 
-    port: 3000
+    port: 8000
 });
 
 server.route({
@@ -21,12 +23,30 @@ server.route({
 	}
 });
 
+// Light the L del on every request
+server.ext('onRequest', function (request, reply) {
+   	var led = new five.Led();
+
+   	led.on();
+    setTimeout(function() {
+        led.off();
+    }, 500);
+
+    return reply.continue();
+});
+
 server.route(require('./routes'));
 
-server.start(function (error) {
-    if (error) {
-        throw error;
-    }
+// Initializing the board
+var board = five.Board();
+board.on('ready', function () {
 
-    console.log('Server running at: ', server.info.uri);
+	// When the board is ready, we run the server
+	server.start(function (error) {
+	    if (error) {
+	        throw error;
+	    }
+
+	    console.log('Server running at: ', server.info.uri);
+	});
 });
