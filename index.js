@@ -30,7 +30,7 @@ server.ext('onRequest', function (request, reply) {
    	led.on();
     setTimeout(function() {
         led.off();
-    }, 500);
+    }, 10);
 
     return reply.continue();
 });

@@ -15,8 +15,10 @@ var move = {
     		return reply(Boom.badRequest());
     	}
 
-    	Drone.move(request.payload.direction, function () {
-    		return reply(true);
+    	Drone.move(request.payload.direction, function (response) {
+    		console.log(response);
+
+            return reply(response);
     	}, function (error) {
     		return reply(Boom.badData(error));
     	});
